@@ -2,7 +2,7 @@ name: Deploy Portfolio to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Deploy on every push to main
+    branches: [ main ]  # 🚀 Deploy on every push to main
 
 permissions:
   contents: read
@@ -36,7 +36,18 @@ jobs:
         with:
           path: dist  # Vite build output folder
 
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
         with:
           branch: gh-pages  # Automatically pushes dist to gh-pages
