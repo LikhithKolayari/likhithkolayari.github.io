@@ -1,0 +1,6 @@
+@reference "./index.css";
+
+.tab-item {
+  @apply rounded-full px-3 py-1 text-sm/6 font-semibold text-white focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-white/5 data-selected:bg-white/10 data-selected:data-hover:bg-white/10;
+}
+
