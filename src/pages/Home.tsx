@@ -1,4 +1,5 @@
 import { FloatingSocialBar } from "../components";
+import profilePic from "../assets/profile.jpg";
 import { useGithubStats } from "../hooks/useGithubStats";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <article className="flex gap-x-4 p-6 max-w-7xl mx-auto">
         <section className="w-[500px] h-[500px] flex-shrink-0">
           <img
-            src="/profile.jpg"
+            src={profilePic}
             alt="Hero"
             loading="lazy"
             className="w-full h-full object-cover rounded-lg"
