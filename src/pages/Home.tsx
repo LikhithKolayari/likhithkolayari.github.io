@@ -1,6 +1,7 @@
 import { FloatingSocialBar } from "../components";
 import profilePic from "../assets/profile.jpg";
 import { useGithubStats } from "../hooks/useGithubStats";
+import homeStyles from "./Home.module.css";
 
 export default function Home() {
   const stats = useGithubStats("likhithkolayari");
@@ -26,20 +27,20 @@ export default function Home() {
               I'm {stats.name}
             </h1>
             <div className="space-y-3 mt-4">
-              <p className="text-base md:text-lg text-justify text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className={homeStyles["para-text"]}>
                 I'm a seasoned Full-Stack Developer who loves building web apps
                 that make people's lives easier and businesses run smoother.
               </p>
-              <p className="text-base md:text-lg text-justify text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className={homeStyles["para-text"]}>
                 I specialize in React, Node.js, and Python, designing
                 cloud-native systems that are scalable, reliable, and deliver an
                 exceptional user experience.
               </p>
-              <p className="text-base md:text-lg text-justify text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className={homeStyles["para-text"]}>
                 With experience across FinTech, Compliance, and SaaS, I turn
                 complex challenges into simple, intuitive digital solutions.
               </p>
-              <p className="text-base md:text-lg text-justify text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className={homeStyles["para-text"]}>
                 Beyond coding, I enjoy exploring low-code platforms and crafting
                 modern design systems that bridge creativity with engineering
                 precision.
