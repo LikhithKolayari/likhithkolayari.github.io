@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div className="relative bg-white dark:bg-gray-900">
       <FloatingSocialBar />
-      <article className="flex gap-x-4 p-6 max-w-7xl mx-auto">
-        <section className="w-[500px] h-[500px] flex-shrink-0">
+      <article className="flex flex-col md:flex-row gap-6 p-4 md:p-6 max-w-7xl mx-auto">
+        <section className="w-full md:w-[400px] lg:w-[500px] h-[300px] md:h-[400px] lg:h-[500px] mx-auto md:mx-0 flex-shrink-0">
           <img
             src={profilePic}
             alt="Hero"
             loading="lazy"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-lg shadow-lg"
           />
         </section>
         {stats ? (

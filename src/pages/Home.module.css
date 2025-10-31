@@ -1,5 +1,12 @@
 @reference "../index.css";
 
 .para-text {
-  @apply text-base md:text-lg text-justify text-gray-600 dark:text-gray-400 leading-relaxed;
+  @apply text-sm sm:text-base md:text-lg text-left sm:text-justify text-gray-600 dark:text-gray-400 leading-relaxed;
+}
+
+/* Add responsive spacing for mobile */
+@media (max-width: 640px) {
+  .para-text {
+    @apply mb-4;
+  }
 }
