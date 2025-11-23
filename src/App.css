@@ -9,4 +9,31 @@
   .tab-item {
     @apply w-full text-center py-2;
   }
+
+  /* Override for mobile footer: distribute tabs evenly instead of full width */
+  .mobile-footer-nav .tab-item {
+    @apply w-auto flex-1;
+  }
+}
+
+/* Mobile footer nav safe area and sizing */
+.mobile-footer-nav {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
+}
+
+.mobile-footer-nav .tab-item {
+  @apply text-xs sm:text-sm;
+}
+
+/* Floating social bar: lift above mobile footer and respect safe areas */
+.floating-social {
+  bottom: calc(
+    env(safe-area-inset-bottom) + 6rem
+  ) !important; /* ~footer height + safe area */
+}
+
+@media (min-width: 640px) {
+  .floating-social {
+    bottom: 1.5rem !important; /* reset for sm+ */
+  }
 }

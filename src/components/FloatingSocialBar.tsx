@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function FloatingSocialBar() {
   return (
-    <div className="fixed right-4 md:right-6 bottom-4 md:bottom-6 flex flex-row md:flex-col gap-2 md:gap-6 z-50">
+    <div className="floating-social fixed right-4 md:right-6 bottom-24 sm:bottom-6 md:bottom-6 flex flex-row md:flex-col gap-3 md:gap-6 z-40 md:z-50">
       <a
         href="https://github.com/LikhithKolayari"
         target="_blank"
