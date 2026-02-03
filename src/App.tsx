@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import "./App.css";
 
@@ -70,7 +71,9 @@ function App() {
             <TabPanel>
               <Home />
             </TabPanel>
-            <TabPanel>Placeholder for About me section</TabPanel>
+            <TabPanel>
+              <AboutMe />
+            </TabPanel>
             <TabPanel>Placeholder for My journey section</TabPanel>
             <TabPanel>Placeholder for Contact section</TabPanel>
           </TabPanels>
